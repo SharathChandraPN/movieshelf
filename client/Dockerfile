@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # Start the development server
-CMD ["sh", "-c", "npm run preview -- --host 0.0.0.0 --port $PORT --allowedHosts all"]
+CMD ["sh", "-c", "npm run preview -- --host 0.0.0.0 --port $PORT"]
