@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const asyncHandler = require("../middleware/asyncHandler");
 const generateToken = require("../utils/generateToken");
 
+
+
+
 // Register
 const register = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
@@ -42,6 +45,9 @@ const register = asyncHandler(async (req, res) => {
     },
   });
 });
+
+
+
 
 // Login
 const login = asyncHandler(async (req, res) => {
