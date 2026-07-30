@@ -25,11 +25,11 @@ function MovieCard({ movie }) {
   return (
     <div className="bg-slate-900 rounded-xl overflow-hidden">
 
-      <img
-        src={movie.poster}
-        alt={movie.title}
-        className="w-full h-72 object-cover"
-      />
+     <img
+  src={movie.poster}
+  alt={movie.title}
+  className="w-full aspect-[9/16] object-cover rounded-xl"
+/>
 
       <div className="p-3">
 
