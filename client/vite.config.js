@@ -10,8 +10,6 @@ export default defineConfig({
 
   preview: {
     host: "0.0.0.0",
-    allowedHosts: [
-      "movieshelf-1.onrender.com",
-    ],
+    allowedHosts: "all",
   },
 });

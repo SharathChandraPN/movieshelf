@@ -1,20 +1,27 @@
-# Use Node.js
 FROM node:22
 
-# Set the working directory
 WORKDIR /app
 
-# Copy package files
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the project files
 COPY . .
 
-# Expose the development server port
-EXPOSE 5173
+RUN npm run build
 
-# Start the development server
+EXPOSE 10000
+
+CMD ["sh", "-c", "npm run preview -- --host 0.0.0.0 --port $PORT"]FROM node:22
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
 CMD ["sh", "-c", "npm run preview -- --host 0.0.0.0 --port $PORT"]
